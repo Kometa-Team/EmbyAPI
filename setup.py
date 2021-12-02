@@ -50,25 +50,25 @@ class PublishCommand(Command):
         sys.exit()
 
 
-setup(name="arrapi",
+setup(name="embyapi",
       version=version,
-      description="A lightweight Python library for Radarr and Sonarr API.",
+      description="A lightweight Python library for Emby API.",
       long_description=long_descr,
-      url="https://github.com/meisnate12/arrapi",
+      url="https://github.com/meisnate12/embyapi",
       author="Nathan Taggart",
       author_email="meisnate12@gmail.com",
       license="MIT",
-      packages=["arrapi"],
+      packages=["embyapi"],
       python_requires=">=3.6",
-      keywords=["arrapi", "sonarr", "radarr", "arr", "wrapper", "api"],
+      keywords=["embyapi", "sonarr", "radarr", "arr", "wrapper", "api"],
       install_requires=[
           "requests"
       ],
       project_urls={
-          "Documentation": "https://arrapi.readthedocs.io/en/latest/",
+          "Documentation": "https://embyapi.readthedocs.io/en/latest/",
           "Funding": "https://github.com/sponsors/meisnate12",
-          "Source": "https://github.com/meisnate12/ArrAPI",
-          "Issues": "https://github.com/meisnate12/ArrAPI/issues",
+          "Source": "https://github.com/meisnate12/EmbyAPI",
+          "Issues": "https://github.com/meisnate12/EmbyAPI/issues",
       },
       classifiers=[
           "Development Status :: 5 - Production/Stable",
