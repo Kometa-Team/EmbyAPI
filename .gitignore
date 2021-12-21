@@ -128,3 +128,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# OpenAPI generated client
+openapi.yml
+emby-server-api-client/
