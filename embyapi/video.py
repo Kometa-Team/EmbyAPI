@@ -28,10 +28,10 @@ class Video(EmbyPartialObject):
         self.backdrop_image_tags: Optional[List[str]] = data.get("BackdropImageTags")
 
     def images(self):
-        return self.fetch_items(f"emby/Items/{self.id}/Images", **{'cls': Image})
+        return self.fetch_items(f"Items/{self.id}/Images", **{'cls': Image})
 
     def upload_image(self, image_type: str, filepath: str):
-        path = f"emby/Items/{self.id}/Images/{image_type}"
+        path = f"Items/{self.id}/Images/{image_type}"
         with open(filepath, 'rb') as image:
             b64_image = base64.b64encode(image.read())
         return self._server.query(method="POST", api_path=path, data=b64_image)

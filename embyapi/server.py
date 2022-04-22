@@ -28,7 +28,7 @@ class EmbyServer(EmbyObject):
         if isinstance(session, requests.Session):
             self._session = session
 
-        path = "emby/system/info/public"
+        path = "system/info/public"
         data = self._server.query(method="GET", api_path=path)
         super().__init__(self, data)
 
@@ -64,10 +64,10 @@ class EmbyServer(EmbyObject):
         return response
 
     def libraries(self) -> List[Library]:
-        media_folders_path = "emby/Library/SelectableMediaFolders"
+        media_folders_path = "Library/SelectableMediaFolders"
         media_folders_response = self.query(method="GET", api_path=media_folders_path)
 
-        virtual_folders_path = "emby/Library/VirtualFolders"
+        virtual_folders_path = "Library/VirtualFolders"
         virtual_folders_response = self.query(method="GET", api_path=virtual_folders_path)
 
         _libraries = []

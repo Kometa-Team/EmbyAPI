@@ -17,13 +17,13 @@ class LibraryFolder(EmbyObject):
         self.type: str = folder[self.TAG]
 
     def items(self) -> List[EmbyPartialObject]:
-        return self.fetch_items("emby/Items", **{'ParentId': self.id})
+        return self.fetch_items("Items", **{'ParentId': self.id})
 
     def total_items(self) -> int:
         params = {
             'ParentId': self.id,
         }
-        path = "emby/Items"
+        path = "Items"
         response = self._server.query(method="GET", api_path=path, params=params)
 
         return len(response.json()['Items'])
