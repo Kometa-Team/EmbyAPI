@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Release for new Tag
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           title: EmbyAPI ${{ github.event.ref }}
           repo_token: ${{ secrets.PAT }}
           prerelease: false
       - uses: actions/checkout@v2
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.x'
       - name: Install dependencies
